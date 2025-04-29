@@ -184,3 +184,19 @@ El comando `git checkout` se utiliza para cambiar entre ramas o restaurar archiv
 3. **Contexto de uso:**
    - Usa `git tag` para marcar puntos importantes en el historial del proyecto.
    - Usa `git checkout` para navegar por el historial, cambiar de rama o deshacer cambios en archivos.
+
+## Cómo Eliminar Etiquetas en Git
+
+### Eliminar una Etiqueta Localmente
+Para eliminar una etiqueta en tu repositorio local, usa el siguiente comando:
+```bash
+git tag -d <nombre-etiqueta>
+```
+
+### Eliminar una Etiqueta en el Repositorio Remoto
+Primero, elimina la etiqueta localmente con el comando anterior. Luego, para eliminarla del repositorio remoto, usa:
+```bash
+git push origin --delete <nombre-etiqueta>
+```
+
+Este proceso asegura que la etiqueta sea eliminada tanto localmente como en el repositorio remoto.
