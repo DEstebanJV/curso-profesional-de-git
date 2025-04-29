@@ -127,3 +127,60 @@ git reset --hard <commit>
   - Con `--soft` si deseas mantener los cambios en el área de staging para un nuevo commit.
   - Con `--mixed` si deseas mantener los cambios en el directorio de trabajo pero no en el área de staging.
   - Con `--hard` si deseas descartar completamente los cambios del área de staging y del directorio de trabajo.
+
+## `git tag` y `git checkout`
+
+### `git tag`
+El comando `git tag` se utiliza para crear **etiquetas** en un repositorio Git. Las etiquetas son referencias que apuntan a un commit específico, generalmente utilizadas para marcar versiones importantes (por ejemplo, versiones de lanzamiento).
+
+**Uso común:**
+- Crear una etiqueta ligera:
+  ```bash
+  git tag <nombre-etiqueta>
+  ```
+- Crear una etiqueta anotada (con mensaje y metadatos):
+  ```bash
+  git tag -a <nombre-etiqueta> -m "Mensaje de la etiqueta"
+  ```
+- Listar etiquetas existentes:
+  ```bash
+  git tag
+  ```
+- Subir etiquetas al repositorio remoto:
+  ```bash
+  git push origin <nombre-etiqueta>
+  ```
+- Subir todas las etiquetas:
+  ```bash
+  git push origin --tags
+  ```
+
+### `git checkout`
+El comando `git checkout` se utiliza para cambiar entre ramas o restaurar archivos en el directorio de trabajo. Es una herramienta versátil que permite moverse dentro del historial del repositorio o deshacer cambios en archivos específicos.
+
+**Uso común:**
+- Cambiar a una rama:
+  ```bash
+  git checkout <nombre-rama>
+  ```
+- Restaurar un archivo al estado del último commit:
+  ```bash
+  git checkout -- <archivo>
+  ```
+- Cambiar a un commit específico (modo "detached HEAD"):
+  ```bash
+  git checkout <hash-del-commit>
+  ```
+
+### Diferencias entre `git tag` y `git checkout`
+1. **Propósito:**
+   - `git tag` se utiliza para marcar un commit específico con una etiqueta, generalmente para identificar versiones importantes.
+   - `git checkout` se utiliza para cambiar entre ramas, commits o restaurar archivos.
+
+2. **Persistencia:**
+   - Las etiquetas creadas con `git tag` son permanentes y se pueden compartir con otros colaboradores.
+   - `git checkout` no crea nada permanente; simplemente cambia el estado del directorio de trabajo o la rama activa.
+
+3. **Contexto de uso:**
+   - Usa `git tag` para marcar puntos importantes en el historial del proyecto.
+   - Usa `git checkout` para navegar por el historial, cambiar de rama o deshacer cambios en archivos.
