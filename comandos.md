@@ -175,6 +175,11 @@ El comando `git checkout` se utiliza para cambiar entre ramas o restaurar archiv
   ```bash
   git checkout -
   ```
+- crear una rama nueva y cambiar a ella:
+  ```bash
+  git checkout -b <nombre-rama>
+  ```
+
 
 ### Diferencias entre `git tag` y `git checkout`
 1. **Propósito:**
