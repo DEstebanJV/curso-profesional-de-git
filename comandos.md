@@ -171,6 +171,10 @@ El comando `git checkout` se utiliza para cambiar entre ramas o restaurar archiv
   ```bash
   git checkout <hash-del-commit>
   ```
+- regresar a la rama actual:
+  ```bash
+  git checkout -
+  ```
 
 ### Diferencias entre `git tag` y `git checkout`
 1. **Propósito:**
@@ -200,3 +204,18 @@ git push origin --delete <nombre-etiqueta>
 ```
 
 Este proceso asegura que la etiqueta sea eliminada tanto localmente como en el repositorio remoto.
+
+## `Git show` 
+
+El comando `git show` se utiliza para mostrar el contenido de un archivo en el repositorio remoto.
+pero tambien puede ver tags, commits, diffs, etc.
+
+**Uso:**
+```bash
+git show <commit>:<archivo>
+```
+
+Ejemplo:
+```bash
+git show HEAD:README.md
+```
