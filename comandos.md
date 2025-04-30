@@ -1,6 +1,7 @@
 # Comandos Básicos de Git
 
 <a href="https://education.github.com/git-cheat-sheet-education.pdf">Manual de bolsillo de comandos de git</a>
+<a href="https://learn.microsoft.com/en-us/training/courses/gh-900t00#course-syllabus">Curso de Microsoft: GitHub Foundations</a>
 
 ## Configuración Inicial
 ```bash
