@@ -68,6 +68,11 @@ git log <branch>..origin/branch
 ```bash
 git push origin <rama>
 ```
+```bash
+git push -u origin <new branch>
+```
+
+Este comando sube una nueva rama al repositorio remoto y establece un seguimiento entre la rama local y la remota. Esto significa que en futuros `git push` o `git pull`, no será necesario especificar el nombre de la rama.
 
 ## Descargar Cambios del Repositorio Remoto
 ```bash
@@ -93,6 +98,12 @@ git merge <nombre-rama>
 ```bash
 git branch -d <nombre-rama>
 ```
+## Eliminar ramas remotas
+```bash
+git fetch -p
+```
+
+Este comando sincroniza el repositorio local con el remoto y elimina las referencias a ramas remotas que ya no existen en el repositorio remoto. Es útil para mantener limpio el listado de ramas remotas en tu repositorio local.
 
 ## Ver Ramas Disponibles
 ```bash
