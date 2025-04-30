@@ -59,6 +59,11 @@ git commit -m "Mensaje del commit"
 git log
 ```
 
+## Ver el Historial de Cambios de una Rama
+```bash
+git log <branch>..origin/branch
+```
+
 ## Subir Cambios al Repositorio Remoto
 ```bash
 git push origin <rama>
